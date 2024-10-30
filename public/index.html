@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euromilhões - Gere sua Chave da Sorte</title>
+    <link rel="stylesheet" href="stylePL1.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Euromilhões Logo" style="max-width: 300px; margin-bottom: -50px;">        
+        <h2>Gere a sua chave da sorte!</h2>
+    </header>
+
+    <main>
+        <div id="divcontainer">
+            <div id="divBet">
+                <div id="divMain">
+                    <ol class="numbers" id="olMain"></ol>
+                </div>
+                <div id="divStars">
+                    <ol class="numbers" id="olStars"></ol>
+                </div>
+                <button id="genBtn"> Gerar Chave </button>
+            </div>
+
+            <section id="manualEntry">
+                <h3>Inserir Chave Manualmente</h3>
+                <label for="numeros">Números (5 valores entre 1-50, separados por vírgula):</label>
+                <input type="text" id="numeros" name="numeros" placeholder="Ex: 1, 5, 12, 34, 50">
+                <br>
+                <label for="estrelas">Estrelas (2 valores entre 1-12, separados por vírgula):</label>
+                <input type="text" id="estrelas" name="estrelas" placeholder="Ex: 2, 11">
+                <br>
+                <button id="inputJsonBtn">Gerar Chave Manualmente</button>
+            </section>         
+        </div>
+    </main>
+</body>
+</html>
