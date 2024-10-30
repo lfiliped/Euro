@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function consomeChave() {
-    fetch("http://localhost:3000/euro")
+    fetch("https://euro-fr0a.onrender.com/euro")
         .then(response => response.json())
         .then(data => {
             console.log(data);
