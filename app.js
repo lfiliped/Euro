@@ -3,6 +3,14 @@ const app = express();
 
 app.use(express.static('public'));
 
+// Middleware para permitir CORS
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Permite todas as origens, ou substitua '*' pelo domínio específico
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Métodos permitidos
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Cabeçalhos permitidos
+    next();
+});
+
 app.get('/ola', function(req, res) {
     console.log("a responder em /");
     res.send('Hello Express!');
