@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         consomeChave();
         geraJson();
     });
-        botaoInputJson.addEventListener("click", () => {
+    botaoInputJson.addEventListener("click", () => {
         geraJsonDosInputs();
         geraJson();
     });
@@ -85,6 +85,16 @@ function geraJsonDosInputs() {
 
     if (estrelas.some(estrela => estrela < 1 || estrela > 12)) {
         alert("Erro: As estrelas devem estar entre 1 e 12.");
+        return;
+    }
+
+    if (new Set(numeros).size !== numeros.length) {
+        alert("Erro: Os números não podem ser repetidos.");
+        return;
+    }
+
+    if (new Set(estrelas).size !== estrelas.length) {
+        alert("Erro: As estrelas não podem ser repetidas.");
         return;
     }
 
